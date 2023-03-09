@@ -8,8 +8,8 @@ function App() {
       <table style={{ border: '4px solid black', width: '200px' }}>
         {/* FIRST ROW */}
         <tr style={{ border: '4px solid black', height:'60px'}}>
-          <td colSpan={4} align="center" style={{ border: '2px solid black' }}>
-            <h5>RESULT</h5>
+          <td colSpan={4} align="right" style={{ border: '2px solid black' }}>
+            <h5>0</h5>
             </td> {/* Column */}
         </tr>
 
