@@ -5,9 +5,9 @@ function App() {
       <h3>. . . CALCULATOR . . .</h3>
       <br />
       {/* START TABLE */}
-      <table style={{ border: '5px solid black', width: '220px' }}>
+      <table style={{ border: '4px solid black', width: '200px' }}>
         {/* FIRST ROW */}
-        <tr style={{ border: '5px solid black', height:'60px'}}>
+        <tr style={{ border: '4px solid black', height:'60px'}}>
           <td colSpan={4} align="center" style={{ border: '2px solid black' }}>
             <h5>RESULT</h5>
             </td> {/* Column */}
@@ -48,7 +48,7 @@ function App() {
         <tr>
           <td align="center"><button type="button" className="btn btn-warning"><b>C</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-dark"><b>0</b></button></td>
-          <td colSpan={2} align="center"><button style={{width:"100px"}} type="button" className="btn btn-danger"><b>Del</b></button></td>
+          <td colSpan={2} align="center"><button style={{width:"100px"}} type="button" className="btn btn-danger"><b>DELETE</b></button></td>
         </tr>
 
       </table>
