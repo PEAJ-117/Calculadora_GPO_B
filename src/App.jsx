@@ -1,4 +1,16 @@
+// Insertar variables inmodificables
+import { useState } from "react"
+
 function App() {
+  // Insertar variables  modificables
+  const [screen, setScreen] = useState("0");
+  const handleButtonClcik = () => {
+    if (screen === '0') {
+      setScreen('9');
+    } else {
+      setScreen(`${screen}9`);
+    }
+  }
 
   return (
      <div align="center">
@@ -9,7 +21,7 @@ function App() {
         {/* FIRST ROW */}
         <tr style={{ border: '4px solid black', height:'60px'}}>
           <td colSpan={4} align="right" style={{ border: '2px solid black' }}>
-            <h5>0</h5>
+            <h5>{screen}</h5> {/* Sustitui rpor variable */}
             </td> {/* Column */}
         </tr>
 
@@ -25,7 +37,7 @@ function App() {
         <tr>
           <td align="center"><button type="button" className="btn btn-outline-primary"><b>7</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-primary"><b>8</b></button></td>
-          <td align="center"><button type="button" className="btn btn-outline-primary"><b>9</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={handleButtonClcik}><b>9</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-secondary"><b>.</b></button></td>
         </tr>
         
