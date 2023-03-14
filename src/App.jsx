@@ -4,11 +4,12 @@ import { useState } from "react"
 function App() {
   // Insertar variables  modificables
   const [screen, setScreen] = useState("0");
-  const handleButtonClcik = () => {
+  // Funcion de los botones
+  const handleButtonClcik = (value) => {
     if (screen === '0') {
-      setScreen('9');
+      setScreen(value);
     } else {
-      setScreen(`${screen}9`);
+      setScreen(`${screen}${value}`);
     }
   }
 
@@ -35,9 +36,9 @@ function App() {
         
         {/* THIRD ROW */}
         <tr>
-          <td align="center"><button type="button" className="btn btn-outline-primary"><b>7</b></button></td>
-          <td align="center"><button type="button" className="btn btn-outline-primary"><b>8</b></button></td>
-          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={handleButtonClcik}><b>9</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('7')}><b>7</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('8')}><b>8</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('9')}><b>9</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-secondary"><b>.</b></button></td>
         </tr>
         
