@@ -1,17 +1,19 @@
 // Insertar variables inmodificables
 import { useState } from "react"
+import './App.css'
 
 function App() {
   // Insertar variables  modificables
   const [screen, setScreen] = useState("0");
   // Funcion de los botones
-  const handleButtonClcik = (value) => {
+  const handleButtonClick = (e) => {
+    const value = e.target.value;
     if (screen === '0') {
       setScreen(value);
     } else {
-      setScreen(`${screen}${value}`);
+      setScreen(`${screen} ${value}`);
     }
-  }
+  };
 
   return (
      <div align="center">
@@ -36,9 +38,9 @@ function App() {
         
         {/* THIRD ROW */}
         <tr>
-          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('7')}><b>7</b></button></td>
-          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('8')}><b>8</b></button></td>
-          <td align="center"><button type="button" className="btn btn-outline-primary" onClick={() => handleButtonClcik('9')}><b>9</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary"><b>7</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary"><b>8</b></button></td>
+          <td align="center"><button type="button" className="btn btn-outline-primary" handleButtonClick><b>9</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-secondary"><b>.</b></button></td>
         </tr>
         
@@ -59,7 +61,7 @@ function App() {
         
         {/* SIXTH ROW */}
         <tr>
-          <td align="center"><button type="button" className="btn btn-warning"><b>C</b></button></td>
+          <td align="center"><button type="button" className="btn btn-warning" value='C'><b>C</b></button></td>
           <td align="center"><button type="button" className="btn btn-outline-dark"><b>0</b></button></td>
           <td colSpan={2} align="center"><button style={{width:"100px"}} type="button" className="btn btn-danger"><b>DELETE</b></button></td>
         </tr>
